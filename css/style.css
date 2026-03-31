@@ -1602,3 +1602,15 @@ em { font-style: normal; color: var(--red); }
 ::-webkit-scrollbar-track { background: var(--black); }
 ::-webkit-scrollbar-thumb { background: var(--red); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--red-dark); }
+
+/* REMOVE CURSOR NO MOBILE */
+@media (max-width: 768px) {
+  #cursor,
+  #cursorFollower {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto !important;
+  }
+}
