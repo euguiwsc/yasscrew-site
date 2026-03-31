@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YASSCREW — Customizador 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/customize.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <div class="nav-logo">
+        <a href="index.html" class="logo-link">
+          <span class="logo-text">YASSCREW</span>
+          <span class="logo-sub">CUSTOMIZE YOUR IDENTITY</span>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="customize.html" class="nav-link active">Customizar</a></li>
+        <li><a href="gallery.html" class="nav-link">Galeria</a></li>
+        <li><a href="about.html" class="nav-link">Sobre</a></li>
+        <li><a href="contact.html" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cta" id="orderBtn">
+          <span>FINALIZAR PEDIDO</span>
+          <i class="fas fa-shopping-bag"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="customize.html">Customizar</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </div>
+
+  <!-- CUSTOMIZER APP -->
+  <main class="customizer-app">
+
+    <!-- STEP INDICATOR -->
+    <div class="steps-bar">
+      <div class="container">
+        <div class="steps-inner">
+          <div class="step-item active" data-step="1">
+            <div class="step-circle">1</div>
+            <span>Peça</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="2">
+            <div class="step-circle">2</div>
+            <span>Design</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="3">
+            <div class="step-circle">3</div>
+            <span>Visualizar</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-item" data-step="4">
+            <div class="step-circle">4</div>
+            <span>Pedir</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZER BODY -->
+    <div class="customizer-body">
+      <div class="customizer-container">
+
+        <!-- LEFT PANEL: TOOLS -->
+        <aside class="tools-panel" id="toolsPanel">
+
+          <!-- STEP 1: CHOOSE PIECE -->
+          <div class="tool-section" id="step1">
+            <div class="tool-section-header">
+              <h3><i class="fas fa-tshirt"></i> Escolha a Peça</h3>
+            </div>
+            <div class="pieces-grid">
+              <button class="piece-btn active" data-piece="tshirt" onclick="selectPiece('tshirt', this)">
+                <div class="piece-icon"><i class="fas fa-tshirt"></i></div>
+                <span>Camiseta</span>
+              </button>
+              <button class="piece-btn" data-piece="hoodie" onclick="selectPiece('hoodie', this)">
+                <div class="piece-icon"><i class="fas fa-tshirt" style="opacity:0.7"></i></div>
+                <span>Moletom</span>
+              </button>
+              <button class="piece-btn" data-piece="jacket" onclick="selectPiece('jacket', this)">
+                <div class="piece-icon"><i class="fas fa-vest"></i></div>
+                <span>Jaqueta</span>
+              </button>
+              <button class="piece-btn" data-piece="cap" onclick="selectPiece('cap', this)">
+                <div class="piece-icon"><i class="fas fa-hat-cowboy"></i></div>
+                <span>Boné</span>
+              </button>
+              <button class="piece-btn" data-piece="pants" onclick="selectPiece('pants', this)">
+                <div class="piece-icon"><i class="fas fa-socks"></i></div>
+                <span>Calça</span>
+              </button>
+              <button class="piece-btn" data-piece="shorts" onclick="selectPiece('shorts', this)">
+                <div class="piece-icon"><i class="fas fa-tshirt" style="font-size:0.7rem"></i></div>
+                <span>Shorts</span>
+              </button>
+            </div>
+
+            <!-- SIZE Selection -->
+            <div class="tool-group">
+              <label class="tool-label">Tamanho</label>
+              <div class="size-buttons">
+                <button class="size-btn" onclick="selectSize('PP', this)">PP</button>
+                <button class="size-btn" onclick="selectSize('P', this)">P</button>
+                <button class="size-btn active" onclick="selectSize('M', this)">M</button>
+                <button class="size-btn" onclick="selectSize('G', this)">G</button>
+                <button class="size-btn" onclick="selectSize('GG', this)">GG</button>
+                <button class="size-btn" onclick="selectSize('XGG', this)">XGG</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: DESIGN -->
+          <div class="tool-section" id="step2">
+            <div class="tool-section-header">
+              <h3><i class="fas fa-palette"></i> Design & Cores</h3>
+            </div>
+
+            <!-- BASE COLOR -->
+            <div class="tool-group">
+              <label class="tool-label">Cor Base</label>
+              <div class="color-grid" id="baseColors">
+                <button class="color-btn active" style="background:#1a1a1a" data-color="#1a1a1a" onclick="setBaseColor('#1a1a1a', this)" title="Preto"></button>
+                <button class="color-btn" style="background:#E63946" data-color="#E63946" onclick="setBaseColor('#E63946', this)" title="Vermelho"></button>
+                <button class="color-btn" style="background:#ffffff;border:1px solid #333" data-color="#ffffff" onclick="setBaseColor('#ffffff', this)" title="Branco"></button>
+                <button class="color-btn" style="background:#222222" data-color="#222222" onclick="setBaseColor('#222222', this)" title="Carvão"></button>
+                <button class="color-btn" style="background:#FFD700" data-color="#FFD700" onclick="setBaseColor('#FFD700', this)" title="Dourado"></button>
+                <button class="color-btn" style="background:#3A86FF" data-color="#3A86FF" onclick="setBaseColor('#3A86FF', this)" title="Azul"></button>
+                <button class="color-btn" style="background:#2D6A4F" data-color="#2D6A4F" onclick="setBaseColor('#2D6A4F', this)" title="Verde"></button>
+                <button class="color-btn" style="background:#6B21A8" data-color="#6B21A8" onclick="setBaseColor('#6B21A8', this)" title="Roxo"></button>
+                <button class="color-btn" style="background:#F97316" data-color="#F97316" onclick="setBaseColor('#F97316', this)" title="Laranja"></button>
+                <button class="color-btn" style="background:#EC4899" data-color="#EC4899" onclick="setBaseColor('#EC4899', this)" title="Rosa"></button>
+                <button class="color-btn" style="background:#475569" data-color="#475569" onclick="setBaseColor('#475569', this)" title="Cinza"></button>
+                <div class="color-custom-wrap">
+                  <input type="color" id="customColor" value="#E63946" oninput="setBaseColor(this.value, null)" title="Cor personalizada" />
+                  <label for="customColor" class="custom-color-label">
+                    <i class="fas fa-eyedropper"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- TEXT ADD -->
+            <div class="tool-group">
+              <label class="tool-label">Adicionar Texto</label>
+              <div class="text-input-row">
+                <input type="text" id="textInput" placeholder="Digite seu texto..." class="tool-input" maxlength="30" />
+                <button class="tool-add-btn" onclick="addTextLayer()">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+              <div class="text-options">
+                <select class="tool-select" id="fontSelect" onchange="updateTextOptions()">
+                  <option value="Bebas Neue">Bebas Neue</option>
+                  <option value="Space Grotesk">Space Grotesk</option>
+                  <option value="Inter">Inter</option>
+                  <option value="Impact">Impact</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <input type="color" id="textColor" value="#ffffff" class="mini-color" onchange="updateTextOptions()" title="Cor do texto" />
+                <input type="range" id="textSize" min="10" max="80" value="32" class="tool-range" oninput="updateTextOptions()" />
+              </div>
+            </div>
+
+            <!-- SHAPES -->
+            <div class="tool-group">
+              <label class="tool-label">Formas</label>
+              <div class="shapes-row">
+                <button class="shape-btn" onclick="addShape('circle')" title="Círculo">
+                  <i class="fas fa-circle"></i>
+                </button>
+                <button class="shape-btn" onclick="addShape('square')" title="Quadrado">
+                  <i class="fas fa-square"></i>
+                </button>
+                <button class="shape-btn" onclick="addShape('star')" title="Estrela">
+                  <i class="fas fa-star"></i>
+                </button>
+                <button class="shape-btn" onclick="addShape('heart')" title="Coração">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="shape-btn" onclick="addShape('bolt')" title="Raio">
+                  <i class="fas fa-bolt"></i>
+                </button>
+                <button class="shape-btn" onclick="addShape('fire')" title="Fogo">
+                  <i class="fas fa-fire"></i>
+                </button>
+              </div>
+              <div class="text-options" style="margin-top:8px">
+                <input type="color" id="shapeColor" value="#E63946" class="mini-color" title="Cor da forma" />
+                <input type="range" id="shapeSize" min="16" max="80" value="40" class="tool-range" />
+              </div>
+            </div>
+
+            <!-- IMAGE UPLOAD -->
+            <div class="tool-group">
+              <label class="tool-label">Upload de Imagem</label>
+              <label class="upload-area" for="imageUpload">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>Clique ou arraste sua imagem</span>
+                <small>PNG, JPG, SVG até 5MB</small>
+              </label>
+              <input type="file" id="imageUpload" accept="image/*" style="display:none" onchange="handleImageUpload(event)" />
+            </div>
+
+            <!-- LOGO PRESETS -->
+            <div class="tool-group">
+              <label class="tool-label">Logos Prontos</label>
+              <div class="logo-presets">
+                <button class="logo-preset-btn" onclick="addLogoPreset('YC')">YC</button>
+                <button class="logo-preset-btn" onclick="addLogoPreset('YASSCREW')">YASSCREW</button>
+                <button class="logo-preset-btn" onclick="addLogoPreset('★')">★</button>
+                <button class="logo-preset-btn" onclick="addLogoPreset('01')">01</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: 3D VIEW -->
+          <div class="tool-section" id="step3">
+            <div class="tool-section-header">
+              <h3><i class="fas fa-cube"></i> Visualização 3D</h3>
+            </div>
+            <div class="view-controls">
+              <button class="view-btn active" onclick="setView('front', this)">
+                <i class="fas fa-arrow-up"></i> Frente
+              </button>
+              <button class="view-btn" onclick="setView('back', this)">
+                <i class="fas fa-arrow-down"></i> Costas
+              </button>
+              <button class="view-btn" onclick="setView('left', this)">
+                <i class="fas fa-arrow-left"></i> Lateral E
+              </button>
+              <button class="view-btn" onclick="setView('right', this)">
+                <i class="fas fa-arrow-right"></i> Lateral D
+              </button>
+            </div>
+            <div class="rotation-control">
+              <label class="tool-label">Rotação Manual</label>
+              <input type="range" id="rotationSlider" min="0" max="360" value="0" class="tool-range" oninput="setManualRotation(this.value)" />
+            </div>
+            <div class="view-extras">
+              <button class="extra-btn" onclick="toggleAutoRotate()">
+                <i class="fas fa-sync-alt" id="autoRotateIcon"></i>
+                <span id="autoRotateLabel">Auto-Rotação: OFF</span>
+              </button>
+              <button class="extra-btn" onclick="toggleWireframe()">
+                <i class="fas fa-border-all"></i>
+                <span id="wireframeLabel">Wireframe: OFF</span>
+              </button>
+              <button class="extra-btn" onclick="toggleLighting()">
+                <i class="fas fa-lightbulb"></i>
+                <span>Iluminação: ON</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 4: ORDER -->
+          <div class="tool-section" id="step4">
+            <div class="tool-section-header">
+              <h3><i class="fas fa-shopping-bag"></i> Finalizar Pedido</h3>
+            </div>
+            <div class="order-summary">
+              <div class="summary-item">
+                <span>Peça:</span>
+                <strong id="summaryPiece">Camiseta</strong>
+              </div>
+              <div class="summary-item">
+                <span>Tamanho:</span>
+                <strong id="summarySize">M</strong>
+              </div>
+              <div class="summary-item">
+                <span>Cor Base:</span>
+                <strong id="summaryColor">Preto</strong>
+              </div>
+              <div class="summary-item">
+                <span>Elementos:</span>
+                <strong id="summaryLayers">0</strong>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-item price">
+                <span>Estimativa:</span>
+                <strong id="summaryPrice">R$ 89,90</strong>
+              </div>
+            </div>
+            <div class="tool-group">
+              <label class="tool-label">Quantidade</label>
+              <div class="qty-row">
+                <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                <span id="qtyDisplay">1</span>
+                <button class="qty-btn" onclick="changeQty(1)">+</button>
+              </div>
+            </div>
+            <div class="tool-group">
+              <label class="tool-label">Observações</label>
+              <textarea class="tool-textarea" id="orderNotes" placeholder="Alguma observação especial?"></textarea>
+            </div>
+            <button class="btn-primary large" style="width:100%;justify-content:center" onclick="submitOrder()">
+              <i class="fas fa-check-circle"></i>
+              <span>CONFIRMAR PEDIDO</span>
+            </button>
+            <button class="save-design-btn" onclick="saveDesign()">
+              <i class="fas fa-save"></i> Salvar Design
+            </button>
+          </div>
+
+        </aside>
+
+        <!-- CENTER: 3D PREVIEW CANVAS -->
+        <div class="canvas-area" id="canvasArea">
+          <div class="canvas-toolbar">
+            <div class="canvas-tools-left">
+              <button class="canvas-tool-btn active" id="toolSelect" onclick="setTool('select')" title="Selecionar">
+                <i class="fas fa-mouse-pointer"></i>
+              </button>
+              <button class="canvas-tool-btn" id="toolMove" onclick="setTool('move')" title="Mover">
+                <i class="fas fa-arrows-alt"></i>
+              </button>
+              <button class="canvas-tool-btn" id="toolRotate" onclick="setTool('rotate')" title="Rotacionar">
+                <i class="fas fa-undo"></i>
+              </button>
+              <button class="canvas-tool-btn" id="toolScale" onclick="setTool('scale')" title="Escalar">
+                <i class="fas fa-expand-arrows-alt"></i>
+              </button>
+              <div class="toolbar-sep"></div>
+              <button class="canvas-tool-btn" onclick="undoAction()" title="Desfazer">
+                <i class="fas fa-undo-alt"></i>
+              </button>
+              <button class="canvas-tool-btn" onclick="redoAction()" title="Refazer">
+                <i class="fas fa-redo-alt"></i>
+              </button>
+              <button class="canvas-tool-btn danger" onclick="clearCanvas()" title="Limpar tudo">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+            <div class="canvas-tools-right">
+              <button class="canvas-tool-btn" onclick="toggleFullscreen()" title="Tela cheia">
+                <i class="fas fa-expand" id="fullscreenIcon"></i>
+              </button>
+              <button class="canvas-tool-btn" onclick="exportDesign()" title="Exportar PNG">
+                <i class="fas fa-download"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="canvas-viewport" id="canvasViewport">
+            <!-- 3D MODEL VIEWER -->
+            <div class="model-viewer-container" id="modelViewerContainer">
+              <!-- Canvas for 2D design area -->
+              <canvas id="designCanvas" width="600" height="600"></canvas>
+              <!-- 3D CSS model overlay -->
+              <div class="model-3d-wrapper" id="model3dWrapper">
+                <div class="model-3d-scene" id="model3dScene">
+                  <div class="garment-3d" id="garment3d">
+                    <!-- Front face -->
+                    <div class="garment-face front" id="garmentFront">
+                      <div class="garment-shape tshirt" id="garmentShape">
+                        <svg class="garment-svg" id="garmentSvg" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
+                          <!-- T-shirt shape -->
+                          <defs>
+                            <clipPath id="tshirtClip">
+                              <path d="M75,0 L30,40 L0,30 L20,90 L55,80 L55,320 L245,320 L245,80 L280,90 L300,30 L270,40 L225,0 Q200,-10 175,10 Q150,25 125,10 Q100,-10 75,0 Z"/>
+                            </clipPath>
+                          </defs>
+                          <!-- Base -->
+                          <path id="svgBase" 
+                            d="M75,0 L30,40 L0,30 L20,90 L55,80 L55,320 L245,320 L245,80 L280,90 L300,30 L270,40 L225,0 Q200,-10 175,10 Q150,25 125,10 Q100,-10 75,0 Z"
+                            fill="#1a1a1a" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+                          <!-- Highlight/shadow overlays -->
+                          <path d="M75,0 L30,40 L0,30 L20,90 L55,80 L55,180 L150,180 L150,0 Q125,10 100,0 Z"
+                            fill="rgba(255,255,255,0.03)"/>
+                          <!-- Design layer group -->
+                          <g id="svgDesignLayer" clip-path="url(#tshirtClip)"></g>
+                          <!-- Texture lines -->
+                          <path d="M55,80 L55,320" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" fill="none"/>
+                          <path d="M245,80 L245,320" stroke="rgba(0,0,0,0.2)" stroke-width="0.5" fill="none"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <!-- Back face -->
+                    <div class="garment-face back" id="garmentBack">
+                      <div class="garment-shape tshirt">
+                        <svg class="garment-svg" viewBox="0 0 300 320" xmlns="http://www.w3.org/2000/svg">
+                          <path id="svgBaseBack" 
+                            d="M75,0 L30,40 L0,30 L20,90 L55,80 L55,320 L245,320 L245,80 L280,90 L300,30 L270,40 L225,0 Q200,-10 175,10 Q150,25 125,10 Q100,-10 75,0 Z"
+                            fill="#1a1a1a" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+                          <g id="svgDesignLayerBack" clip-path="url(#tshirtClip)">
+                            <text x="150" y="180" text-anchor="middle" fill="rgba(255,255,255,0.1)" font-family="Bebas Neue" font-size="20" letter-spacing="3">YASSCREW</text>
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CANVAS OVERLAY INSTRUCTIONS -->
+            <div class="canvas-hint" id="canvasHint">
+              <i class="fas fa-hand-pointer"></i>
+              <span>Clique para adicionar elementos ao design</span>
+            </div>
+
+            <!-- VIEW INDICATOR -->
+            <div class="view-indicator" id="viewIndicator">FRENTE</div>
+          </div>
+
+          <!-- CANVAS BOTTOM BAR -->
+          <div class="canvas-bottom">
+            <div class="nav-steps-btns">
+              <button class="step-nav-btn prev" id="prevStepBtn" onclick="navigateStep(-1)" disabled>
+                <i class="fas fa-arrow-left"></i> Anterior
+              </button>
+              <div class="current-step-label" id="currentStepLabel">Passo 1 de 4 — Escolha a Peça</div>
+              <button class="step-nav-btn next" id="nextStepBtn" onclick="navigateStep(1)">
+                Próximo <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT PANEL: LAYERS -->
+        <aside class="layers-panel" id="layersPanel">
+          <div class="panel-header">
+            <h3><i class="fas fa-layer-group"></i> Camadas</h3>
+            <button class="panel-clear-btn" onclick="clearCanvas()" title="Limpar">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+
+          <div class="layers-list" id="layersList">
+            <div class="layers-empty">
+              <i class="fas fa-layer-group"></i>
+              <p>Nenhum elemento<br />adicionado ainda</p>
+            </div>
+          </div>
+
+          <!-- LAYER PROPERTIES -->
+          <div class="layer-props" id="layerProps" style="display:none">
+            <div class="panel-header">
+              <h3><i class="fas fa-sliders-h"></i> Propriedades</h3>
+            </div>
+            <div class="prop-group">
+              <label>Opacidade</label>
+              <input type="range" id="propOpacity" min="0" max="100" value="100" oninput="updateLayerProp('opacity', this.value)" />
+              <span id="propOpacityVal">100%</span>
+            </div>
+            <div class="prop-group">
+              <label>Rotação</label>
+              <input type="range" id="propRotation" min="-180" max="180" value="0" oninput="updateLayerProp('rotation', this.value)" />
+              <span id="propRotationVal">0°</span>
+            </div>
+            <div class="prop-group">
+              <label>Escala</label>
+              <input type="range" id="propScale" min="10" max="200" value="100" oninput="updateLayerProp('scale', this.value)" />
+              <span id="propScaleVal">100%</span>
+            </div>
+            <div class="prop-group">
+              <label>Posição X</label>
+              <input type="range" id="propX" min="0" max="300" value="150" oninput="updateLayerProp('x', this.value)" />
+            </div>
+            <div class="prop-group">
+              <label>Posição Y</label>
+              <input type="range" id="propY" min="0" max="320" value="160" oninput="updateLayerProp('y', this.value)" />
+            </div>
+            <div class="prop-actions">
+              <button class="prop-btn danger" onclick="deleteSelectedLayer()">
+                <i class="fas fa-trash"></i> Deletar
+              </button>
+              <button class="prop-btn" onclick="duplicateLayer()">
+                <i class="fas fa-clone"></i> Duplicar
+              </button>
+            </div>
+          </div>
+
+          <!-- SAVED DESIGNS -->
+          <div class="saved-designs">
+            <div class="panel-header">
+              <h3><i class="fas fa-bookmark"></i> Salvos</h3>
+            </div>
+            <div id="savedList">
+              <div class="layers-empty">
+                <i class="fas fa-bookmark"></i>
+                <p>Nenhum design<br />salvo ainda</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ORDER MODAL -->
+  <div class="modal-overlay" id="orderModal" style="display:none">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+      <div class="modal-icon success">
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <h2>Pedido Enviado! 🎉</h2>
+      <p>Seu design foi registrado com sucesso. Em breve entraremos em contato para confirmar os detalhes e iniciar a produção.</p>
+      <div class="modal-details" id="modalDetails"></div>
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="closeModal()">
+          <span>NOVO DESIGN</span>
+          <i class="fas fa-plus"></i>
+        </button>
+        <a href="gallery.html" class="btn-secondary">
+          <span>VER GALERIA</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE.JS for 3D -->
+  <script>
+    // Load Three.js dynamically with fallback
+    window.THREE_LOADED = false;
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" 
+    onload="window.THREE_LOADED = true" 
+    onerror="console.log('Three.js CDN failed, using CSS 3D fallback')"></script>
+  <script src="js/main.js"></script>
+  <script src="js/customizer.js"></script>
+</body>
+</html>

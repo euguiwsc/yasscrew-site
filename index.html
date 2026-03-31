@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YASSCREW — Customize Your Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- CURSOR CUSTOM -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">YASSCREW</div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-text" id="loaderText">Carregando...</div>
+    </div>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <div class="nav-logo">
+        <a href="index.html" class="logo-link">
+          <span class="logo-text">YASSCREW</span>
+          <span class="logo-sub">CUSTOMIZE YOUR IDENTITY</span>
+        </a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="customize.html" class="nav-link">Customizar</a></li>
+        <li><a href="gallery.html" class="nav-link">Galeria</a></li>
+        <li><a href="about.html" class="nav-link">Sobre</a></li>
+        <li><a href="contact.html" class="nav-link">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-cta" onclick="window.location.href='customize.html'">
+          <span>CRIAR AGORA</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="customize.html">Customizar</a></li>
+      <li><a href="gallery.html">Galeria</a></li>
+      <li><a href="about.html">Sobre</a></li>
+      <li><a href="contact.html">Contato</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-glow"></div>
+      </div>
+      <div class="hero-content container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>NOVA COLEÇÃO DISPONÍVEL</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line" data-text="VISTA">VISTA</span>
+          <span class="title-line accent" data-text="SUA">SUA</span>
+          <span class="title-line" data-text="IDENTIDADE">IDENTIDADE</span>
+        </h1>
+        <p class="hero-desc">
+          Crie peças únicas com nossa ferramenta de customização 3D. 
+          Do design à entrega — tudo personalizado para você.
+        </p>
+        <div class="hero-actions">
+          <a href="customize.html" class="btn-primary">
+            <span>COMEÇAR A CUSTOMIZAR</span>
+            <i class="fas fa-pencil-ruler"></i>
+          </a>
+          <a href="gallery.html" class="btn-secondary">
+            <span>VER GALERIA</span>
+            <i class="fas fa-th-large"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="2400">0</span><span>+</span>
+            <span class="stat-label">Peças Criadas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="98">0</span><span>%</span>
+            <span class="stat-label">Satisfação</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="360">0</span><span>°</span>
+            <span class="stat-label">Visualização 3D</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" id="heroScroll">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <div class="marquee-content" id="marqueeContent">
+          <span>YASSCREW</span><span class="dot">✦</span>
+          <span>CUSTOMIZE</span><span class="dot">✦</span>
+          <span>3D MODELING</span><span class="dot">✦</span>
+          <span>YOUR STYLE</span><span class="dot">✦</span>
+          <span>UNIQUE PIECES</span><span class="dot">✦</span>
+          <span>YASSCREW</span><span class="dot">✦</span>
+          <span>CUSTOMIZE</span><span class="dot">✦</span>
+          <span>3D MODELING</span><span class="dot">✦</span>
+          <span>YOUR STYLE</span><span class="dot">✦</span>
+          <span>UNIQUE PIECES</span><span class="dot">✦</span>
+          <span>YASSCREW</span><span class="dot">✦</span>
+          <span>CUSTOMIZE</span><span class="dot">✦</span>
+          <span>3D MODELING</span><span class="dot">✦</span>
+          <span>YOUR STYLE</span><span class="dot">✦</span>
+          <span>UNIQUE PIECES</span><span class="dot">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <section class="features section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">O QUE OFERECEMOS</span>
+          <h2 class="section-title">Tecnologia a serviço<br /><em>do seu estilo</em></h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-delay="0">
+            <div class="feature-icon">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h3>Modelagem 3D</h3>
+            <p>Visualize sua peça em 360° antes de produzir. Gire, amplie e veja cada detalhe como se estivesse na sua mão.</p>
+            <a href="customize.html" class="feature-link">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card featured" data-aos="fade-up" data-delay="100">
+            <div class="feature-badge">POPULAR</div>
+            <div class="feature-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Design Livre</h3>
+            <p>Adicione estampas, textos, logos e padrões. Nossa paleta de cores ilimitada te deixa criar sem limites.</p>
+            <a href="customize.html" class="feature-link">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-delay="200">
+            <div class="feature-icon">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <h3>Múltiplas Peças</h3>
+            <p>Camisetas, moletons, jaquetas, bonés e muito mais. Escolha a peça e personalize do zero.</p>
+            <a href="customize.html" class="feature-link">Explorar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-delay="300">
+            <div class="feature-icon">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <h3>Entrega Expressa</h3>
+            <p>Produção em 5 dias úteis. Entregamos em todo o Brasil com rastreamento em tempo real.</p>
+            <a href="contact.html" class="feature-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMIZE CTA SECTION -->
+    <section class="customize-cta section" id="customizeCta">
+      <div class="cta-bg">
+        <div class="cta-grid"></div>
+      </div>
+      <div class="container">
+        <div class="cta-inner">
+          <div class="cta-text">
+            <span class="section-tag">FERRAMENTA 3D</span>
+            <h2 class="cta-title">Construa sua peça<br /><em class="accent-text">do zero</em></h2>
+            <p>Nossa ferramenta de customização 3D te permite ver cada detalhe da sua criação antes de confirmar o pedido. Escolha a peça, defina as cores, adicione elementos e visualize em tempo real.</p>
+            <ul class="cta-list">
+              <li><i class="fas fa-check-circle"></i> Rotação 360° em tempo real</li>
+              <li><i class="fas fa-check-circle"></i> Paleta de cores ilimitada</li>
+              <li><i class="fas fa-check-circle"></i> Upload de estampas próprias</li>
+              <li><i class="fas fa-check-circle"></i> Preview de texto e logos</li>
+              <li><i class="fas fa-check-circle"></i> Exportar design em PDF</li>
+            </ul>
+            <a href="customize.html" class="btn-primary large">
+              <span>ABRIR CUSTOMIZADOR</span>
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          <div class="cta-visual">
+            <div class="visual-frame">
+              <div class="visual-screen">
+                <div class="vs-header">
+                  <span class="vs-dot red"></span>
+                  <span class="vs-dot yellow"></span>
+                  <span class="vs-dot green"></span>
+                  <span class="vs-label">YASSCREW 3D Studio</span>
+                </div>
+                <div class="vs-body">
+                  <div class="vs-3d-preview">
+                    <div class="tshirt-3d" id="tshirt3dPreview">
+                      <div class="tshirt-body">
+                        <div class="tshirt-sleeve left"></div>
+                        <div class="tshirt-sleeve right"></div>
+                        <div class="tshirt-main" id="previewShirt">
+                          <div class="tshirt-design" id="previewDesign">
+                            <span class="preview-logo">YC</span>
+                          </div>
+                        </div>
+                        <div class="tshirt-neck"></div>
+                      </div>
+                    </div>
+                    <div class="vs-controls">
+                      <button class="vs-btn" onclick="rotatePreview('left')"><i class="fas fa-undo"></i></button>
+                      <button class="vs-btn active">3D</button>
+                      <button class="vs-btn" onclick="rotatePreview('right')"><i class="fas fa-redo"></i></button>
+                    </div>
+                  </div>
+                  <div class="vs-palette">
+                    <div class="vs-palette-item" style="background:#E63946" onclick="changePreviewColor('#E63946')"></div>
+                    <div class="vs-palette-item" style="background:#1a1a1a" onclick="changePreviewColor('#1a1a1a')"></div>
+                    <div class="vs-palette-item" style="background:#ffffff" onclick="changePreviewColor('#ffffff')"></div>
+                    <div class="vs-palette-item" style="background:#FFD700" onclick="changePreviewColor('#FFD700')"></div>
+                    <div class="vs-palette-item" style="background:#3A86FF" onclick="changePreviewColor('#3A86FF')"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW SECTION -->
+    <section class="gallery-preview section" id="galleryPreview">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CRIAÇÕES</span>
+          <h2 class="section-title">Últimas peças<br /><em>customizadas</em></h2>
+          <a href="gallery.html" class="see-all-link">Ver tudo <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item large" data-aos="fade-up">
+            <div class="gallery-img" style="background: linear-gradient(135deg, #E63946 0%, #1a1a1a 100%);">
+              <div class="gallery-tshirt">
+                <div class="gt-body red">
+                  <span class="gt-text">YASSCREW</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Camiseta</span>
+              <h4>Red Crew Classic</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-delay="100">
+            <div class="gallery-img" style="background: linear-gradient(135deg, #1a1a1a 0%, #E63946 100%);">
+              <div class="gallery-tshirt">
+                <div class="gt-body dark">
+                  <span class="gt-text">YC 01</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Moletom</span>
+              <h4>Dark Street</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-delay="200">
+            <div class="gallery-img" style="background: linear-gradient(135deg, #FFD700 0%, #E63946 100%);">
+              <div class="gallery-tshirt">
+                <div class="gt-body gold">
+                  <span class="gt-text">GOLD</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Jaqueta</span>
+              <h4>Gold Edition</h4>
+            </div>
+          </div>
+          <div class="gallery-item" data-aos="fade-up" data-delay="300">
+            <div class="gallery-img" style="background: linear-gradient(135deg, #3A86FF 0%, #1a1a1a 100%);">
+              <div class="gallery-tshirt">
+                <div class="gt-body blue">
+                  <span class="gt-text">BLUE</span>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-info">
+              <span class="gallery-tag">Camiseta</span>
+              <h4>Blue Wave</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">COMO FUNCIONA</span>
+          <h2 class="section-title">Do design à sua<br /><em>porta em 4 passos</em></h2>
+        </div>
+        <div class="process-steps">
+          <div class="process-step" data-aos="fade-up" data-delay="0">
+            <div class="step-number">01</div>
+            <div class="step-icon"><i class="fas fa-tshirt"></i></div>
+            <h3>Escolha a Peça</h3>
+            <p>Selecione entre camisetas, moletons, jaquetas, bonés e muito mais.</p>
+          </div>
+          <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step" data-aos="fade-up" data-delay="100">
+            <div class="step-number">02</div>
+            <div class="step-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>Personalize</h3>
+            <p>Use nossa ferramenta 3D para adicionar cores, estampas, textos e logos.</p>
+          </div>
+          <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step" data-aos="fade-up" data-delay="200">
+            <div class="step-number">03</div>
+            <div class="step-icon"><i class="fas fa-cube"></i></div>
+            <h3>Visualize em 3D</h3>
+            <p>Confira cada detalhe em 360° antes de confirmar o pedido.</p>
+          </div>
+          <div class="process-arrow"><i class="fas fa-chevron-right"></i></div>
+          <div class="process-step" data-aos="fade-up" data-delay="300">
+            <div class="step-number">04</div>
+            <div class="step-icon"><i class="fas fa-box"></i></div>
+            <h3>Receba em Casa</h3>
+            <p>Produzimos e entregamos sua peça única em todo o Brasil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">DEPOIMENTOS</span>
+          <h2 class="section-title">O que a crew<br /><em>está dizendo</em></h2>
+        </div>
+        <div class="testimonials-slider" id="testimonialsSlider">
+          <div class="testimonial-card active">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Nunca pensei que personalizar roupa seria tão fácil. O customizador 3D é incrível, dá pra ver cada detalhe antes de comprar. Minha camiseta ficou exatamente como eu queria."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: #E63946;">MR</div>
+              <div class="author-info">
+                <strong>Mateus R.</strong>
+                <span>São Paulo, SP</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Encomendei para meu grupo todo. A ferramenta de design é muito profissional, parece um software de edição mesmo. Qualidade da peça é top, chegou antes do prazo."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: #1a1a1a;">JS</div>
+              <div class="author-info">
+                <strong>Julia S.</strong>
+                <span>Rio de Janeiro, RJ</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"YASSCREW é diferente de tudo que já usei. A visualização 3D faz toda a diferença na hora de confirmar o design. Já pedi 3 vezes e sempre impecável."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: #E63946;">PL</div>
+              <div class="author-info">
+                <strong>Pedro L.</strong>
+                <span>Belo Horizonte, MG</span>
+              </div>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-dots" id="testimonialDots">
+          <button class="dot active" onclick="goToTestimonial(0)"></button>
+          <button class="dot" onclick="goToTestimonial(1)"></button>
+          <button class="dot" onclick="goToTestimonial(2)"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section" id="finalCta">
+      <div class="fct-bg">
+        <div class="fct-glow"></div>
+      </div>
+      <div class="container">
+        <div class="fct-inner">
+          <span class="section-tag">READY?</span>
+          <h2 class="fct-title">Sua identidade.<br /><em>Seu design.</em></h2>
+          <p>Junte-se à crew e crie peças que contam sua história.</p>
+          <a href="customize.html" class="btn-primary xlarge">
+            <span>CUSTOMIZAR AGORA</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">YASSCREW</span>
+          <p>Customize your identity. Viste sua história com peças únicas feitas especialmente para você.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="customize.html">Customizar</a></li>
+              <li><a href="gallery.html">Galeria</a></li>
+              <li><a href="about.html">Sobre</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Suporte</h4>
+            <ul>
+              <li><a href="contact.html">Contato</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Política de Entrega</a></li>
+              <li><a href="#">Trocas e Devoluções</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><i class="fas fa-envelope"></i> hello@yasscrew.com</li>
+              <li><i class="fab fa-whatsapp"></i> (11) 99999-9999</li>
+              <li><i class="fas fa-map-marker-alt"></i> Brasil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 YASSCREW. Todos os direitos reservados.</span>
+        <span>Made with <i class="fas fa-heart" style="color:#E63946"></i> in Brazil</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
